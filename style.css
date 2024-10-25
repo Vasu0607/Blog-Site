@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 1em;
+    z-index: 2;
+    opacity: 0; /* Start invisible */
+    animation: slideDown 0.6s ease-in-out forwards;  /* Navbar animation */
+    animation-delay: 4s; /* Delay to start after text animation */
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    letter-spacing: 1px;
+    font-size: small;
+    transition: color 0.3s ease-in-out;
+    z-index: 2;
+    
+}
+.navbar .Content-Universe {
+    color: #926a3e;
+    font-weight: bold;
+}
+
+.text {
+    position: absolute;
+    top: 150px;
+    left: 55px;
+    font-weight: bold;
+    transform: translate(0% 0%);
+    font-family: Arial, sans-serif;
+    font-size: 15vw; /* Start larger */
+    color: #644424;
+    text-transform: uppercase;
+    letter-spacing: 9vw; /* Start with more space between letters */
+    filter: blur(50px);
+    animation: clearText 0.8s forwards;
+    opacity: 0; /* Start invisible */
+    animation-delay: 0s; /* Start immediately */
+    z-index: 2; /* Higher z-index for text */
+    white-space: nowrap;
+}
+.text-second{
+    position: absolute;
+    top: 70px;
+    left: 35px;
+    width: calc(100% - 20px);
+    z-index: 2;
+    font-weight: bolder;
+    font-size: medium;
+    letter-spacing: 0em;
+    line-height: 0.8;
+    color: #efdecd;
+    animation: ardent 0.5s forwards;
+    animation-delay: 0.7s;
+    opacity: 0;
+}
+.text-third {
+    position: absolute;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    line-height: 0.2;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: ardent 0.7s forwards;
+    animation-delay: 2.3s;
+    opacity: 0;
+}
+
+.text-third p{
+    position: absolute;
+    top: 375px;
+    left: 249px;
+    font-size: 30px;
+    color: #D4b996ff;
+}
+.text-third h1{
+    position: absolute;
+    top: 400px;
+    left: 210px;
+    font-size: 50px;
+    color: #A07855FF;
+
+}
+
+.image-container {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    width: 590.052px;
+    height: 825px;
+    transition-delay: 10s;
+    transform: translate(0px,0px) rotate(0deg) scale(1);
+    
+    
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    opacity: 0;
+    transform: scale(1); /* Initial zoom-in state */
+    animation: image-container 0.8s forwards;
+    animation-delay: 1.3s;
+
+
+}
+.para{
+    position: absolute;
+    top: 520px;
+    left: 220px;
+    font-weight: 900; /* Maximum thickness */
+    letter-spacing: -1.4px; /* Decrease space between letters */
+    font-size: 14px; /* Adjust size as needed */
+    line-height: 0.8;
+    font-family: Arial, sans-serif; /* Choose a bold font family */
+    text-transform: uppercase; /* Optional: makes text all uppercase */
+    color: #4a2806;
+    animation: para1 0.5s forwards;
+    animation-delay: 2.9s;
+    opacity: 0;
+}
+.vertical{
+    position: absolute;
+    top: 750px;
+    left: 25px;
+    display: inline-block; /* Ensures the transform applies properly */
+    transform: rotate(270.5deg); /* Rotate the text */
+    transform-origin: left top; /* Set the origin for the rotation */
+    white-space: nowrap; /* Prevents text from wrapping */
+    font-size: 14px; /* Font size */
+    margin: 20px; /* Margin for spacing */
+}
+.sen1 {
+    position: absolute;
+    top: 827px;
+    left: 200px;
+    font-family: Arial, sans-serif;
+    font-weight:bold;
+    color: rgba(0, 0, 0, 0.824);  
+    letter-spacing: 1px;
+    animation: ardent 0.7s forwards;
+    animation-delay: 3.4s;
+    opacity: 0;
+}
+.sen2{
+    position: absolute;
+    top: 845px;
+    left: 200px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.571);  
+    letter-spacing: 1px;
+    animation: ardent 0.7s forwards;
+    animation-delay: 3.4s;
+    opacity: 0;
+}
+.sen3{
+    position: absolute;
+    top: 863px;
+    left: 200px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.272); 
+    letter-spacing: 1px; 
+    animation: ardent 0.7s forwards;
+    animation-delay: 3.4s;
+    opacity: 0;
+}
+
+.subscribe{
+    position: absolute;
+    top: 800px;
+    left: 1197px;
+    font-size: 14px;
+    color: red;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: red;
+}
+
+
+@keyframes slideDown {
+    from{
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes image-container {
+    from{
+        opacity: 0;
+        height: 0px;
+    }
+    to{
+        opacity: 1;
+        height: 825px;
+        transform: scale(1);
+    }
+}
+@keyframes clearText {
+    to {
+        font-size: 10vw;/* Final size */
+        letter-spacing: 3vw; /* Final letter-spacing */
+        filter: blur(0);
+        opacity: 1; /* Fade in text */
+    }
+}
+@keyframes ardent {
+    from{
+        letter-spacing: 0px;
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        letter-spacing: 5px;
+
+    }
+    
+}
+@keyframes para1 {
+    to{
+        opacity: 1;
+    }
+}
+
